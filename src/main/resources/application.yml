@@ -7,8 +7,19 @@ spring:
         url: jdbc:h2:mem:test
 
     app:
-        jwtSecret: SecretKey@123
-        jwtExpirationMs: 10000000000000000000000000
+        jwtSecret: Secret123jdgadgqehbaksjbdaigdbdwbqkujhvsXHJVHQDGDBKJCSAdqgdjh
+        jwtExpirationMs: 1000000000
+
+logging:
+    level:
+        org:
+            springframework : DEBUG
+            hibernate:
+                SQL: DEBUG
+            security: DEBUG
+        com:
+            example:
+                securitydemo: DEBUG
 
 #    security:
 #      user:

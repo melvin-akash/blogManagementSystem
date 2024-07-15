@@ -1,4 +1,4 @@
-package com.melvin.blogManagementSystem.config.jwt;
+package com.melvin.blogManagementSystem.jwt;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;

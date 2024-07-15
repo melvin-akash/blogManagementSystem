@@ -1,4 +1,4 @@
-package com.melvin.blogManagementSystem.config.jwt;
+package com.melvin.blogManagementSystem.jwt;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
