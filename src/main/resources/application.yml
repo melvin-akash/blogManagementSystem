@@ -1,10 +1,30 @@
 spring:
     application.name: blogManagementSystem
-    h2:
-        console:
-            enabled: true
     datasource:
-        url: jdbc:h2:mem:test
+        url: jdbc:mysql://localhost:3306/blogManagement
+        username: root
+        password: rootroot
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+        show-sql: true
+        generate-ddl: true
+
+    app:
+        jwtSecret: Secret123jdgadgqehbaksjbdaigdbdwbqkujhvsXHJVHQDGDBKJCSAdqgdjh
+        jwtExpirationMs: 1000000000
+
+logging:
+    level:
+        org:
+            springframework : DEBUG
+            hibernate:
+                SQL: DEBUG
+            security: DEBUG
+        com:
+            example:
+                securitydemo: DEBUG
 
 #    security:
 #      user:
