@@ -30,7 +30,7 @@ import static com.melvin.blogManagementSystem.entity.Role.USER;
 
 @SuppressWarnings("ALL")
 @RestController
-@RequestMapping("/blog")
+@RequestMapping("/security")
 public class DemoController {
 
     @Autowired
@@ -44,9 +44,6 @@ public class DemoController {
 
     @Autowired
     PasswordEncoder passwordEncoder;
-
-//    @Autowired
-//    JdbcUserDetailsManager jdbcUserDetailsManager;
 
     @Autowired
     DataSource dataSource;

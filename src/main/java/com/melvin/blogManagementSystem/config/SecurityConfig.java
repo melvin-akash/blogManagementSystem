@@ -54,8 +54,8 @@ public class SecurityConfig {
     public SecurityFilterChain FilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(authorizeRequests ->
                 authorizeRequests
-                        .requestMatchers("/blog/signin").permitAll()
-                        .requestMatchers("/blog/register2").permitAll()
+                        .requestMatchers("/security/signin").permitAll()
+                        .requestMatchers("/security/register2").permitAll()
                         .anyRequest()
                         .authenticated());
         http.sessionManagement(
@@ -76,38 +76,5 @@ public class SecurityConfig {
 
         return http.build();
     }
-
-
-//    @Bean
-//    public UserDetailsService userDetailsService(DataSource dataSource) {
-//        return new JdbcUserDetailsManager(dataSource);
-//    }
-
-//    @Bean
-//    public CommandLineRunner initData(UserDetailsService userDetailsService) {
-//        return args -> {
-////            JdbcUserDetailsManager manager = (JdbcUserDetailsManager) userDetailsService;
-//
-//            UserDetails user1 = User.withUsername("user1")
-//                    .password(passwordEncoder().encode("pass"))
-//                    .roles("USER")
-//                    .build();
-//            UserDetails user2 = User.withUsername("user2")
-//                    .password(passwordEncoder().encode("pass"))
-//                    .roles("USER")
-//                    .build();
-//            UserDetails user3 = User.withUsername("user3")
-//                    .password(passwordEncoder().encode("pass"))
-//                    .roles("ADMIN")
-//                    .build();
-//
-//            JdbcUserDetailsManager userDetailsManager = new JdbcUserDetailsManager(dataSource);
-//            userDetailsManager.createUser(user1);
-//            userDetailsManager.createUser(user2);
-//            userDetailsManager.createUser(user3);
-//        };
-//    }
-
-
 
 }
